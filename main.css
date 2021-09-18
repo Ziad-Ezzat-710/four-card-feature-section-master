@@ -1,0 +1,140 @@
+/* Start Vars */
+:root {
+    /* Neutral */
+    --main-color: hsl(229, 6%, 66%);
+    --second-color: hsl(234, 12%, 34%);
+    --reg-font: hsl(0, 0%, 98%);
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+}
+/* End Vars */
+/* Start Global */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins";
+}
+.all {
+    margin: 70px auto;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+/* End Global */
+/* Start Heading */
+.heading {
+    text-align: center;
+}
+.norm {
+    color: var(--second-color);
+    font-weight: 200;
+    font-size: 35px;
+    margin-bottom: -3px;
+}
+.bol {
+    font-weight: 600;
+    color: var(--second-color);
+    font-size: 35px;
+    margin: 0;
+}
+.head {
+    font-size: 18px;
+    color: var(--main-color);
+    font-weight: 400;
+    width: 500px;
+    margin: 15px auto;
+}
+/* End Heading */
+/* Start Cards */
+.cards {
+    margin-top: 80px;
+    transform: translateX(15%);
+    position: relative;
+}
+.card {
+    background-color: white;
+    border-radius: 4px;
+    width: 39%;
+    height: 250px;
+    position: relative;
+    box-shadow: 3px 15px 10px #e0e9f0;
+    margin: 15px;
+    display: inline-block;
+}
+.card h4 {
+    color: var(--second-color);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 25px 20px 0;
+}
+.card p {
+    color: var(--main-color);
+    font-size: 15px;
+    padding: 10px 20px;
+}
+.card img {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.team {
+    border-top: 4px solid var(--red);
+    transform: translateX(-75%);
+}
+.supervisor {
+    border-top: 4px solid var(--cyan);
+    transform: translate(-75%, 50%);
+}
+.karma {
+    border-top: 4px solid var(--orange);
+    transform: translate(35%, -5%);
+}
+.calc {
+    border-top: 4px solid var(--blue);
+    position: absolute;
+    right: 0;
+    transform: translateY(60%);
+}
+/* End Cards */
+/* Start Queries */
+@media (max-width: 375px) {
+    .calc {
+        position: relative;
+        order: 2;
+    }
+    * {
+        max-width: 270px;
+    }
+    .cards * {
+        transform: translate(0);
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transform: translateX(-5%);
+        align-items: center;
+        margin-top: 50px;
+    }
+    .card {
+        width: 100%;
+    }
+    .card p {
+        font-size: 12px;
+    }
+    .heading h2 {
+        font-size: 22px;
+    }
+    .heading .head {
+        font-size: 13px;
+    }
+}
+/* End Queries */
